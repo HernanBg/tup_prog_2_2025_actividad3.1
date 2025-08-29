@@ -6,7 +6,21 @@ using System.Threading.Tasks;
 
 namespace Actividad3._1.Models
 {
-    internal class Perro
+    public  class Perro : Animal
     {
+        public Perro()
+        {
+        }
+
+        public string Ladra()
+        {
+            return "Guau Guau";
+        }
+
+        public override List<string> CorreRutinas()
+        {
+            string ladrido = Ladra();
+            return new List<string> { ladrido };
+        }
     }
 }
